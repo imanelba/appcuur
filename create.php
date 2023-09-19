@@ -40,7 +40,7 @@ if (isset($_POST['type']) && $_POST['type'] === 'patient') {
            if (isset($_POST['submit_create_appointement'])) {
 
             $id_patient= $_POST['ID_PATIENT'];
-            $id_utilisateur = 1;
+            $id_utilisateur = true;
             $date = $_POST['DATE'];
             $begining_time = $_POST['BEGINING_TIME'];
             $end_time = $_POST['END_TIME'];

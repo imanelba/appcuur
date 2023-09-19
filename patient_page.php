@@ -39,7 +39,7 @@ $result = $conn->query($sql);
 
             <li><a href="consultation_page.php">Consultation</a></li>
 
-            <li><a href="deconnexion_page.php">LO</a></li>
+            <li><a class="n" href="deconnexion_page.php">LO</a></li>
       
           </ul>
       </nav>
@@ -49,20 +49,14 @@ $result = $conn->query($sql);
 <body>
 
     <div class="container">
-
+        
         <h2>Patient list </h2>
         <h1><a href="patient_form.php?type=patient">Add Patient</a></h1>
         <br>
 
-        <form action="patient_form.php" method="GET" class="form-inline">
-    <div class="form-group">
-        <label for="search">Search :</label>
-        <input type="text" name="search" class="form-control" id="search" placeholder="Search...">
-    </div>
-    <button type="submit" class="btn btn-success">Search</button>
-</form>
-    <br>
-    <br>
+       
+
+
 
 
 
@@ -124,7 +118,7 @@ $result = $conn->query($sql);
 
                     
 
-                    <td><a class="btn btn-success" href="update.php?patien_id=<?php echo $row['ID_PATIENT']; ?>">Edit</a>&nbsp;<a class="btn btn-primary" href="update.php?type=consultation&patien_id=<?php echo $row['ID_PATIENT']; ?>">C</a>&nbsp;<a class="btn btn-danger" href="delete.php?type=patient&patien_id=<?php echo $row['ID_PATIENT']; ?>">Delete</a</td>
+                    <td><a class="btn btn-success" href='edit_patient.php'>Edit</a>&nbsp;<a class="btn btn-primary" href="update.php?type=consultation&patien_id=<?php echo $row['ID_PATIENT']; ?>">C</a>&nbsp;<a class="btn btn-danger" href="delete.php?type=patient&patien_id=<?php echo $row['ID_PATIENT']; ?>">Delete</a</td>
 
                     </tr>                       
 

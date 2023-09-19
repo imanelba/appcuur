@@ -51,16 +51,10 @@ $result = $conn->query($sql);
         <h2>Consultation List</h2>
         <h1><a href="consultattation_form.php?type=consultation">Add Consultation</a></h1>
         <br>
+       
 
-        <form action="patient_page.php" method="GET" class="form-inline">
-        <div class="form-group">
-            <label for="search">Search :</label>
-            <input type="text" name="search" class="form-control" id="search" placeholder="Search...">
-        </div>
-        <button type="submit" class="btn btn-success">Search</button>
-    </form>
-    <br>
-    <br>
+
+       
 
 <table class="table">
 

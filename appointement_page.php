@@ -52,15 +52,7 @@ $result = $conn->query($sql);
         <h1><a href="appointement_form.php?type=appointement">Add Appointement</a></h1>
         <br>
 
-        <form action="appointement_page.php" method="GET" class="form-inline">
-        <div class="form-group">
-            <label for="search">Search :</label>
-            <input type="text" name="search" class="form-control" id="search" placeholder="Search...">
-        </div>
-        <button type="submit" class="btn btn-success">Search</button>
-    </form>
-    <br>
-    <br>
+       
 
 <table class="table">
 
@@ -110,7 +102,7 @@ $result = $conn->query($sql);
 
                     <td><?php echo $row['MOTIVE']; ?></td>
 
-                    <td><a class="btn btn-success" href="update.php?rdv_id=<?php echo $row['ID_RDV']; ?>">Edit</a>&nbsp;<a class="btn btn-primary" href="specific_appointement.php">View</a>&nbsp;<a class="btn btn-danger" href="delete.php?type=rdv&rdv_id=<?php echo $row['ID_RDV']; ?>">Delete</a></td>
+                    <td><a class="btn btn-success" href="update.php?rdv_id=<?php echo $row['ID_RDV']; ?>">Edit</a>&nbsp;<a class="btn btn-danger" href="delete.php?type=rdv&rdv_id=<?php echo $row['ID_RDV']; ?>">Delete</a></td>
 
                     </tr>                       
 

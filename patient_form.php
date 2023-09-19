@@ -18,66 +18,66 @@
         $result = $conn->query($sql);
 
         if ($result->num_rows === 1) {
-            $patientData = $result->fetch_assoc();
+            $row = $result->fetch_assoc();
 
            
 ?>
-        <form action="update.php?type=patient&ID_PATIENT=<?php echo $_GET['ID_PATIENT']; ?>" method="post">
+        <form action="edit_patient.php" method="post">
 
-            <input type="hidden" name="type" value="patient">        
+            <input type="hidden" name="patientid" value="<?php echo $row["ID_PATIENT"]; ?>">        
 
             <label for="FIRST_NAME">First Name:</label>
-            <input type="text" name="FIRST_NAME" value="<?php echo $patientData['FIRST_NAME']; ?>">
+            <input type="text" name="FIRST_NAME" value="<?php echo $row['FIRST_NAME']; ?>">
             <br>
             <br>
 
             <label for="LAST_NAME">Last Name:</label>
-            <input type="text" name="LAST_NAME" value="<?php echo $patientData['LAST_NAME']; ?>">
+            <input type="text" name="LAST_NAME" value="<?php echo $row['LAST_NAME']; ?>">
             <br>
             <br>
 
             <label for="YEAR_OF_BIRTH">Birth Date:</label>
-            <input type="date" name="YEAR_OF_BIRTH" value="<?php echo $patientData['YEAR_OF_BIRTH']; ?>">
+            <input type="date" name="YEAR_OF_BIRTH" value="<?php echo $row['YEAR_OF_BIRTH']; ?>">
             <br>
             <br>
 
             <label for="GENDER">Gender:</label>
-            <input type="text" name="GENDER" value="<?php echo $patientData['GENDER']; ?>">
+            <input type="text" name="GENDER" value="<?php echo $row['GENDER']; ?>">
             <br>
             <br>
 
             <label for="CIN">Cin:</label>
-            <input type="text" name="CIN" value="<?php echo $patientData['CIN']; ?>">
+            <input type="text" name="CIN" value="<?php echo $row['CIN']; ?>">
             <br>
             <br>
 
             <label for="ADDRESS">Address:</label>
-            <input type="text" name="ADDRESS" value="<?php echo $patientData['ADDRESS']; ?>">
+            <input type="text" name="ADDRESS" value="<?php echo $row['ADDRESS']; ?>">
             <br>
             <br>
 
             <label for="EMAIL">Email:</label>
-            <input type="email" name="EMAIL" value="<?php echo $patientData['EMAIL']; ?>">
+            <input type="email" name="EMAIL" value="<?php echo $row['EMAIL']; ?>">
             <br>
             <br>
 
             <label for="PHONE_NUMBER">Phone Number:</label>
-            <input type="text" name="PHONE_NUMBER" value="<?php echo $patientData['PHONE_NUMBER']; ?>">
+            <input type="text" name="PHONE_NUMBER" value="<?php echo $row['PHONE_NUMBER']; ?>">
             <br>
             <br>
 
             <label for="HEALTH_INSURANCE">Health Insurance:</label>
-            <input type="text" name="HEALTH_INSURANCE" value="<?php echo $patientData['HEALTH_INSURANCE']; ?>">
+            <input type="text" name="HEALTH_INSURANCE" value="<?php echo $row['HEALTH_INSURANCE']; ?>">
             <br>
             <br>
 
             <label for="EMERGENCY_CONTACT">Emergency Contact:</label>
-            <input type="text" name="EMERGENCY_CONTACT" value="<?php echo $patientData['EMERGENCY_CONTACT']; ?>">
+            <input type="text" name="EMERGENCY_CONTACT" value="<?php echo $row['EMERGENCY_CONTACT']; ?>">
             <br>
             <br>
 
             <label for="EMERGENCY_NUMBERR">Emergency Numberr:</label>
-            <input type="text" name="EMERGENCY_NUMBERR" value="<?php echo $patientData['EMERGENCY_NUMBERR']; ?>">
+            <input type="text" name="EMERGENCY_NUMBERR" value="<?php echo $row['EMERGENCY_NUMBERR']; ?>">
             <br>
             <br>
             
